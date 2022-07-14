@@ -1,32 +1,18 @@
 // 10- Realiza un script que pida número de filas y columnas y escriba una tabla. Dentro de cada una de las celdas deberá escribirse un número consecutivo en orden descendente. Si, por ejemplo, la tabla es de 7×5 los números irán del 35 al 1.
-//DECLARAMOS LAS VARIABLES
-var i,j;
-//PEDIMOS POR TECLADO EL NÚMERO DE FILAS
-//Number fuerza a que se introduzca un número
-var filas = Number(prompt("Introduce numero de filas"));
-//PEDIMOS EL NÚMERO DE COLUMNAS
-var colum = Number(prompt("Introduce numero de columnas"));
-//MULTIPLICAMOS filas * columnas Y GUARDAMOS EL RESULTADO EN res
-var res = filas * colum;
-//COMENZAMOS A IMPRIMIR LA TABLA
+
+let i,j;
+let filas = Number(prompt("Ingrese un numero de filas"));
+let columnas = Number(prompt("Ingrese un numero de columnas"));
+let resultado = filas * columnas;
 document.write("<table border>");
-//BUCLE DESDE 0 HASTA EL NÚMERO DE FILAS
 for (i = 0; i < filas; i++) {
-    //EN CADA FILA ESCRIBIMOS UN <tr> PARA COMENZAR LA FILA
     document.write("<tr>");
-    //BUCLE DESDE 0 HASTA EL NÚMERO DE COLUMNAS
-    for (j = 0; j < colum; j++) {
-        //EN CADA UNA ESCRIBIMOS UN <td> PARA COMENZAR UNA CELDA
+    for (j = 0; j < columnas; j++) {
         document.write("<td>");
-        //LUEGO ESCRIBIMOS EL VALOR DE res
-        document.write(res);
-        //LE RESTAMOS 1 A res
-        res--;
-        //Y ESCRIBIMOS UN </td> PARA CERRAR LA CELDA
+        document.write(resultado);
+        resultado--;
         document.write("</td>");
     }
-    //ESCRIBIMOS UN </tr> PORQUE SE TERMINÓ LA FILA
     document.write("</tr>");
 }
-//Y POR ÚLTIMO CERRAMOS LA TABLA CON </table>
 document.write("</table>");
